@@ -32,26 +32,6 @@ export default class NewsLocal extends Component {
     }
 
     async componentDidMount() {
-        // console.log('componentDidMount ' + this.props.category)
-        // let categoryTypeData = []
-        // if (this.props.category === 'general') {
-        //     categoryTypeData = this.state.data.slice(0, 4)
-        // } else if (this.props.category === 'business') {
-        //     categoryTypeData = this.state.data.slice(4, 8)
-        // } else if (this.props.category === 'entertainment') {
-        //     categoryTypeData = this.state.data.slice(8, 12)
-        // } else if (this.props.category === 'health') {
-        //     categoryTypeData = this.state.data.slice(12, 16)
-        // } else if (this.props.category === 'science') {
-        //     categoryTypeData = this.state.data.slice(16, 20)
-        // } else if (this.props.category === 'sports') {
-        //     categoryTypeData = this.state.data.slice(20, 24)
-        // } else if (this.props.category === 'technology') {
-        //     categoryTypeData = this.state.data.slice(24, 28)
-        // } else {
-        //     categoryTypeData = this.state.data.slice(28, 30)
-        // }
-        // console.log(categoryTypeData)
         let categoryTypeData = this.state.data.slice(0, 4)
         this.setState({
             articles : categoryTypeData,
@@ -94,13 +74,6 @@ export default class NewsLocal extends Component {
                         </div>
                     </div>
                 </InfiniteScroll>
-                {/* <div className='container'>
-                    <div className="d-flex justify-content-between">
-                        <button disabled={this.state.page === 1} type="button" className="btn btn-dark" onClick={this.onPreviousClick}>&larr; Previous</button>
-                        <button type="button">{this.state.page}</button>
-                        <button disabled={Math.ceil(this.state.totalResults/this.props.pageSize) === this.state.page} type="button" className="btn btn-dark" onClick={this.onNextClick}>Next &rarr;</button>
-                    </div>
-                </div> */}
             </>
         )
     }
