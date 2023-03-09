@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState } from 'react'
 import Navbar from './components/Navbar';
 import News from './components/News';
+import NewsLocal from './components/NewsLocal';
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,8 +25,9 @@ const App = () => {
           color='#f11946'
           progress={progress}
         />
-        <Navbar />        
-        <Routes>
+        <Navbar />
+        <NewsLocal setProgress={setProgress} apiKey={apiKey} pageSize={pageSize} country='us' category='general' />
+        {/* <Routes>
             <Route exact path="/" element={<News apiKey={apiKey} setProgress={setProgress} key='home' pageSize={pageSize} country='us' category='general' />}></Route>
             <Route exact path="/general" element={<News apiKey={apiKey} setProgress={setProgress} key='general' pageSize={pageSize} country='us' category='general' />}></Route>
             <Route exact path="/business" element={<News apiKey={apiKey} setProgress={setProgress} key='business' pageSize={pageSize} country='us' category='business' />}></Route>
@@ -34,7 +36,7 @@ const App = () => {
             <Route exact path="/science" element={<News apiKey={apiKey} setProgress={setProgress} key='science' pageSize={pageSize} country='us' category='science' />}></Route>
             <Route exact path="/sports" element={<News apiKey={apiKey} setProgress={setProgress} key='sports' pageSize={pageSize} country='us' category='sports' />}></Route>
             <Route exact path="/technology" element={<News apiKey={apiKey} setProgress={setProgress} key='technology' pageSize={pageSize} country='us' category='technology' />}></Route>
-          </Routes>
+          </Routes> */}
       </Router>
     </div>
   )
